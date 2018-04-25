@@ -1,115 +1,128 @@
 <?php
     include_once('cabecalho.php');
     include_once('conecta.php');
-    include_once('cadastra-database.php');
-    $funcionarios = buscarFuncionarios($conexao);
+    include_once('funcionario-database.php');
+    include_once("regiao-database.php");
+
+    $conexao = new BancoDeDados("cloud.matheusmiliorini.com.br","northwind","essaeminhasenha","northwind");
+    $func = new Funcionario($conexao);
+    $reg = new Regiao($conexao);
+
+    $funcionarios = $func->buscarFuncionarios();
+    $regioes = $reg->listaRegioes();
 ?>
-
-
-
-    <form action="cadastra-database-fun.php" method="POST">
-        <input type="hidden" id="id" name="id" class="form-control" >
+    <form action="cadastro-funcionario.php" method="post">
         <div class="col-md-6">
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" class="form-control" >
+                <input type="text" class="form-control" id="nome" name="nome" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="sobrenome">Sobrenome</label>
-                <input type="text"  id="sobrenome" name="sobrenome" class="form-control">
+                <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" id="titulo" name="titulo">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="titulo">Título</label>
-                <input type="text"  id="titulo" name="titulo" class="form-control">
+                <label for="titulocortesia">Titulo Cortesia</label>
+                <input type="text" class="form-control" id="titulocortesia" name="titulocortesia">
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="datanascimento">Nascimento</label>
+                <input type="date" class="form-control" id="datanascimento" name="datanascimento">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="titulocortesia">Título Cortesia</label>
-                <input type="text"  id="titulocortesia" name="titulocortesia" class="form-control">
+                <label for="dataadmissao">Admissão</label>
+                <input type="date" class="form-control" id="dataadmissao" name="dataadmissao">
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="datanascimento">Data de Nascimento</label>
-                <input type="date"  id="datanascimento" name="datanascimento" class="form-control">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="dataadmissao">Data de Admição</label>
-                <input type="date"  id="dataadmissao" name="dataadmissao" class="form-control">
-            </div>
-        </div>
+
         <div class="col-md-3">
             <div class="form-group">
                 <label for="endereco">Endereço</label>
-                <input type="text"  id="endereco" name="endereco" class="form-control">
+                <input type="text" class="form-control" id="endereco" name="endereco">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label for="cidade">Cidade</label>
-                <input type="text"  id="cidade" name="cidade" class="form-control">
+                <input type="text" class="form-control" id="cidade" name="cidade">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label for="regiao">Região</label>
-                <input type="text"  id="regiao" name="regiao" class="form-control">
+                <select name="regiao" id="regiao" class="form-control">
+                    <?php foreach ($regioes as $regiao): ?>
+                        <option value="<?=$regiao['IDRegiao']?>"><?=$regiao['DescricaoRegiao']?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label for="cep">CEP</label>
-                <input type="number"  id="cep" name="cep" class="form-control">
+                <input type="number" class="form-control" id="cep" name="cep">
             </div>
         </div>
+
         <div class="col-md-6">
             <div class="form-group">
                 <label for="pais">País</label>
-                <input type="text"  id="pais" name="pais" class="form-control">
+                <input type="text" class="form-control" id="pais" name="pais">
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
             <div class="form-group">
                 <label for="telefoneresidencial">Telefone Residencial</label>
-                <input type="number"  id="telefoneresidencial" name="telefoneresidencial" class="form-control">
+                <input type="text" class="form-control" id="telefoneresidencial" name="telefoneresidencial">
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
             <div class="form-group">
-                <label for="extensao">Extensao</label>
-                <input type="text"  id="extensao" name="extensao" class="form-control">
+                <label for="extensao">Extensão</label>
+                <input type="text" class="form-control" id="extensao" name="extensao">
             </div>
         </div>
-        <div class="col-md-6">
-        <div class="form-group">
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="notas">Notas</label>
+                <input type="text" class="form-control" id="notas" name="notas">
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
                 <label for="repotase">Reporta-se à</label>
                 <select name="reportase" id="reportase" class="form-control">
-                    <?php foreach ($funcionarios as $func): ?>
-                        <option value="<?=$func['IDFuncionario']?>"><?=$func['Nome'].' '.$func['Sobrenome']?></option>
+                    <?php foreach ($funcionarios as $funcionario): ?>
+                        <option value="<?=$funcionario['IDFuncionario']?>"><?=$funcionario['Nome'].' '.$funcionario['Sobrenome']?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
         </div>
+
         <div class="col-md-12">
             <div class="form-group">
-                <label for="notas">Notas</label>
-                <input type="text"  id="notas" name="notas" class="form-control">
+                <button type="submit" class="btn btn-success totalwidth">Submit</button>
             </div>
         </div>
-        
-        <div class="form-group">
-            <button type="submit" class="btn btn-success totalwidth" >Cadastrar</button>
-        </div>
     </form>
-  
-
 <?php
     include_once('rodape.php');
-    ?>
+?>
