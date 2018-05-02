@@ -30,8 +30,8 @@
         foreach ($funcionarios as $funcionario):
     ?>
     <tr>
-        <td><?=$funcionario["sobrenome"]?></td>
         <td><?=$funcionario["nome"]?></td>
+        <td><?=$funcionario["sobrenome"]?></td>
         <td><?=$funcionario["titulo"]?></td>
         <td><?=$funcionario["tituloCortesia"]?></td>
         <td><?=$funcionario["dataNac"]?></td>

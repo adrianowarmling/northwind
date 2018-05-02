@@ -1,0 +1,14 @@
+{
+    "name": "adria/northwind",
+    "description": "Composer NorthWind",
+    "type": "project",
+    "require": {
+        "twbs/bootstrap": "^4.1"
+    },
+    "authors": [
+        {
+            "name": "adrianowarmling",
+            "email": "adrianowarmling@unidavi.edu.br"
+        }
+    ]
+}
