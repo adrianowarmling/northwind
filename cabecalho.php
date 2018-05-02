@@ -18,6 +18,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="cadastro-funcionario-form.php">Cadastro de funcionário</a></li>
                     <li><a href="cadastro-regiao-form.php">Cadastro Região</a></li>
+                    <li><a href="funcionario-lista.php">Lista Funcionários</a></li>
                     <li><a href="#"></a></li>
                 </ul>
             </div>

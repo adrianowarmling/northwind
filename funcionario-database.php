@@ -14,6 +14,15 @@
     
             return $query;
         }
+        function listaFuncionario(){
+            $funcionarios = array();
+            $resultado = mysqli_query($this->conexao, "SELECT sobrenome, nome, titulo, tituloCortesia, dataNac, dataAdmissao, endereco, cidade, regiao, cep, pais, telefoneResidencial, extensao, notas,reportase FROM funcionarios");
+           
+            while ($linha = mysqli_fetch_assoc($resultado)) {
+                array_push($funcionarios,$linha);
+            }
+            return $funcionarios;
+        }
     
         function buscarFuncionarios() {
             $funcionarios = array();

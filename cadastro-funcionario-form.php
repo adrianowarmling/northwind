@@ -4,7 +4,7 @@
     include_once('funcionario-database.php');
     include_once("regiao-database.php");
 
-    $conexao = new BancoDeDados("cloud.matheusmiliorini.com.br","nothwind","essaeminhasenha","northwind");
+    $conexao = new BancoDeDados("cloud.matheusmiliorini.com.br","northwind","essaeminhasenha","northwind");
     $func = new Funcionario($conexao);
     $reg = new Regiao($conexao);
 
