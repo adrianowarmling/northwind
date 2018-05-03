@@ -5,7 +5,7 @@
             $this->conexao = $conexao->getCon();
         }
         function addTerritorio($nome) {
-            $sql = "INSERT INTO territorios(DescricaoTerritorio) VALUES('$nome')";
+            $sql = "INSERT INTO territorios(IDTerritorio,DescricaoTerritorio,IDRegiao) VALUES('$id','$nome','$regiao')";
             return mysqli_query($this->conexao,$sql);
         }
         function listaTerritorio() {

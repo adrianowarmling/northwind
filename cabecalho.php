@@ -20,6 +20,7 @@
                     <li><a href="cadastro-regiao-form.php">Cadastro Região</a></li>
                     <li><a href="funcionario-lista.php">Lista Funcionários</a></li>
                     <li><a href="territorio-lista.php">Lista Territórios</a></li>
+                    <li><a href="cadastra-territorio-form.php">Cadastra Territorio</a></li>
                     <li><a href="#"></a></li>
                 </ul>
             </div>
