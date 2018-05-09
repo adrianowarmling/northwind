@@ -14,16 +14,17 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a href="index.php" class="navbar-brand">North Wind</a>
+                <a href="index.php" class="nav-link active">North Wind</a>
             </div>
             <div>
-                <ul class="nav navbar-nav">
-                    <li><a href="cadastro-funcionario-form.php">Cadastro de funcionário</a></li>
-                    <li><a href="cadastro-regiao-form.php">Cadastro Região</a></li>
-                    <li><a href="lista-regiao.php">Listar Regiões</a></li>
-                    <li><a href="cadastro-territorio-form.php">Cadastro Território</a></li>
-                    <li><a href="lista-territorios.php">Listar Territórios</a></li>
-                    <li><a href="lista-funcionario.php">Lista de Funcionários</a></li>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="cadastro-funcionario-form.php" class="nav-item nav-link disabled">Cadastro de funcionário</a>
+                </li>
+                    <li class="nav-item"><a href="cadastro-regiao-form.php"class="nav-item nav-link disabled">Cadastro Região</a></li>
+                    <li class="nav-item"><a href="lista-regiao.php"class="nav-item nav-link disabled">Listar Regiões</a></li>
+                    <li class="nav-item"><a href="cadastro-territorio-form.php"class="nav-item nav-link disabled">Cadastro Território</a></li>
+                    <li class="nav-item"><a href="lista-territorios.php"class="nav-item nav-link disabled">Listar Territórios</a></li>
+                    <li class="nav-item"><a href="lista-funcionario.php"class="nav-item nav-link disabled">Lista de Funcionários</a></li>
                 </ul>
             </div>
         </div>
