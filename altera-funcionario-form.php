@@ -12,12 +12,17 @@
     $ter = new Territorio($conexao);
 
     $funcionarios = $func->buscarFuncionarios();
+
+    $estefuncionario = $func->buscarInfoFuncionario($_GET['ID']);
 ?>
-    <form action="cadastro-funcionario.php" method="post">
+    <form action="altera-funcionario.php" method="post">
+
+        <input type="hidden" name="IDFuncionario" value="<?=$_GET['ID']?>">
+
         <div class="col-md-6">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("nome","text","Nome");
+                    $input = new CpInput("nome","text","Nome",$estefuncionario['Nome']);
                     echo $input->render();
                 ?>
             </div>
@@ -25,7 +30,7 @@
         <div class="col-md-6">
             <div class="form-group">
             <?php
-                    $input = new CpInput("sobrenome","text","Sobrenome");
+                    $input = new CpInput("sobrenome","text","Sobrenome",$estefuncionario['Sobrenome']);
                     echo $input->render();
                 ?>
             </div>
@@ -34,7 +39,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("titulo","text","Titulo");
+                    $input = new CpInput("titulo","text","Titulo",$estefuncionario['Titulo']);
                     echo $input->render();
                 ?>
             </div>
@@ -42,7 +47,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("titulocortesia","text","Titulo Cortesia");
+                    $input = new CpInput("titulocortesia","text","Titulo Cortesia",$estefuncionario['TituloCortesia']);
                     echo $input->render();
                 ?>
             </div>
@@ -51,7 +56,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("datanascimento","date","Data de Nascimento");
+                    $input = new CpInput("datanascimento","date","Data de Nascimento"); //Não deu certo pra preencher com data...
                     echo $input->render();
                 ?>
             </div>
@@ -59,7 +64,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("dataadmissao","date","Data de Admissão");
+                    $input = new CpInput("dataadmissao","date","Data de Admissão"); //Não deu certo pra preencher com data...
                     echo $input->render();
                 ?>
             </div>
@@ -68,7 +73,7 @@
         <div class="col-md-3">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("endereco","text","Endereço");
+                    $input = new CpInput("endereco","text","Endereço",$estefuncionario['Endereco']);
                     echo $input->render();
                 ?>
             </div>
@@ -76,7 +81,7 @@
         <div class="col-md-3">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("cidade","text","Cidade");
+                    $input = new CpInput("cidade","text","Cidade",$estefuncionario['Cidade']);
                     echo $input->render();
                 ?>
             </div>
@@ -92,7 +97,7 @@
         <div class="col-md-3">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("cep","number","CEP");
+                    $input = new CpInput("cep","number","CEP",$estefuncionario['Cep']);
                     echo $input->render();
                 ?>
             </div>
@@ -109,7 +114,7 @@
         <div class="col-md-3">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("pais","text","País");
+                    $input = new CpInput("pais","text","País",$estefuncionario['Pais']);
                     echo $input->render();
                 ?>
             </div>
@@ -117,7 +122,7 @@
         <div class="col-md-3">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("telefoneresidencial","text","Telefone Residencial");
+                    $input = new CpInput("telefoneresidencial","text","Telefone Residencial",$estefuncionario['TelefoneResidencial']);
                     echo $input->render();
                 ?>
             </div>
@@ -125,7 +130,7 @@
         <div class="col-md-3">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("extensao","text","Extensão");
+                    $input = new CpInput("extensao","text","Extensão",$estefuncionario['Extensao']);
                     echo $input->render();
                 ?>
             </div>
@@ -134,7 +139,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <?php
-                    $input = new CpInput("notas","text","Notas");
+                    $input = new CpInput("notas","text","Notas",$estefuncionario['Notas']);
                     echo $input->render();
                 ?>
             </div>

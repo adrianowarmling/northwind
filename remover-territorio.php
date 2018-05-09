@@ -6,7 +6,7 @@
     $conexao = new BancoDeDados();
     $ter = new Territorio($conexao);
 
-    $sucesso = $ter->addTerritorio($_POST['id'],$_POST['nome'],$_POST['regiao']);
+    $sucesso = $ter->removeTerritorio($_GET['ID']);
 
     if ($sucesso) {
         header('Location:index.php');

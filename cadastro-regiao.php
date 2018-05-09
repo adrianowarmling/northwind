@@ -3,7 +3,7 @@
     include_once("conecta.php");
     include_once("regiao-database.php");
 
-    $conexao = new BancoDeDados("cloud.matheusmiliorini.com.br","northwind","essaeminhasenha","northwind");
+    $conexao = new BancoDeDados();
     $reg = new Regiao($conexao);
 
     $sucesso = $reg->addRegiao($_POST['nome']);

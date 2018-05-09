@@ -1,12 +1,12 @@
 <?php
     include_once("cabecalho.php");
     include_once("conecta.php");
-    include_once("territorio-database.php");
+    include_once("regiao-database.php");
 
     $conexao = new BancoDeDados();
-    $ter = new Territorio($conexao);
+    $reg = new Regiao($conexao);
 
-    $sucesso = $ter->addTerritorio($_POST['id'],$_POST['nome'],$_POST['regiao']);
+    $sucesso = $reg->removeRegiao($_GET['ID']);
 
     if ($sucesso) {
         header('Location:index.php');
