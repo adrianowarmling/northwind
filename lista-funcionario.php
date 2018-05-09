@@ -48,8 +48,8 @@
         <td><?=$funcionario["Extensao"]?></td>
         <td><?=$funcionario["Notas"]?></td>
         <td><?=$funcionario["reportasea"]?></td>
-        <td><a href="remove-funcionario.php?ID=<?=$funcionario['IDFuncionario']?>">Remover</a></td>
-        <td><a href="altera-funcionario-form.php?ID=<?=$funcionario['IDFuncionario']?>">Alterar</a></td>
+        <td><a href="remove-funcionario.php?ID=<?=$funcionario['IDFuncionario']?>"class="badge badge-danger">Remover</a></td>
+        <td><a href="altera-funcionario-form.php?ID=<?=$funcionario['IDFuncionario']?>"class="badge badge-warning">Alterar</a></td>
      
         </tr>
     </tr>

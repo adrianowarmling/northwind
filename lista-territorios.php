@@ -24,8 +24,8 @@
                     <td><?=$territorio['IDTerritorio']?></td>
                     <td><?=$territorio['DescricaoTerritorio']?></td>
                     <td><?=$territorio['IDRegiao']?></td>
-                    <td><a href="remover-territorio.php?ID=<?=$territorio['IDTerritorio']?>">Remover</a></td>
-                    <td><a href="altera-territorio-form.php?ID=<?=$territorio['IDTerritorio']?>">Alterar</a></td>
+                    <td><a href="remover-territorio.php?ID=<?=$territorio['IDTerritorio']?>" class="badge badge-danger">Remover</a></td>
+                    <td><a href="altera-territorio-form.php?ID=<?=$territorio['IDTerritorio']?>"class="badge badge-warning">Alterar</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

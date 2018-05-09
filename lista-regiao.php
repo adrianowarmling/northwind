@@ -24,8 +24,8 @@
                 <tr>
                     <td><?=$regiao['IDRegiao']?></td>
                     <td><?=$regiao['DescricaoRegiao']?></td>
-                    <td><a href="remover-regiao.php?ID=<?=$regiao['IDRegiao']?>">Remover</a></td>
-                    <td><a href="altera-regiao-form.php?ID=<?=$regiao['IDRegiao']?>">Alterar</a></td>
+                    <td><a href="remover-regiao.php?ID=<?=$regiao['IDRegiao']?>"class="badge badge-danger">Remover</a></td>
+                    <td><a href="altera-regiao-form.php?ID=<?=$regiao['IDRegiao']?>"class="badge badge-warning">Alterar</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
