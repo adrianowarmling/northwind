@@ -1,11 +1,13 @@
 {
-    "name": "43009/northwind",
+    "name": "adria/composer",
+    "description": "Composer teste",
+    "type": "project",
     "require": {
-        "twbs/bootstrap": "3.3.7"
+        "twbs/bootstrap": "^4.1"
     },
     "authors": [
         {
-            "name": "AdrianoWarmling",
+            "name": "adrianowarmling",
             "email": "adrianowarmling@unidavi.edu.br"
         }
     ]
