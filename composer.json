@@ -1,12 +1,12 @@
 {
-    "name": "42118/northwind",
+    "name": "43009/northwind",
     "require": {
         "twbs/bootstrap": "3.3.7"
     },
     "authors": [
         {
-            "name": "MatheusMiliorini",
-            "email": "miliorinimatheus@gmail.com"
+            "name": "AdrianoWarmling",
+            "email": "adrianowarmling@unidavi.edu.br"
         }
     ]
 }
