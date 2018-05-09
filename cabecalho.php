@@ -19,22 +19,10 @@
             <div>
                 <ul class="nav navbar-nav">
                     <li><a href="cadastro-funcionario-form.php">Cadastro de funcionário</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Região<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="cadastro-regiao-form.php">Cadastro Região</a></li>
-                            <li><a href="lista-regiao.php">Listar Regiões</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Território<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="cadastro-territorio-form.php">Cadastro Território</a></li>
-                            <li><a href="lista-territorios.php">Listar Territórios</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="cadastro-regiao-form.php">Cadastro Região</a></li>
+                    <li><a href="lista-regiao.php">Listar Regiões</a></li>
+                    <li><a href="cadastro-territorio-form.php">Cadastro Território</a></li>
+                    <li><a href="lista-territorios.php">Listar Territórios</a></li>
                     <li><a href="lista-funcionario.php">Lista de Funcionários</a></li>
                 </ul>
             </div>
